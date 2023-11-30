@@ -1,0 +1,8 @@
+print('==== DESAFIO 22 ====')
+nome = str(input('Digite seu nome: '))
+print('Seu nome é em Maiúsculas é {}'.format(nome.upper()))
+print('Seu nomw é em Minúsculas é {}'.format(nome.lower()))
+lista2 = ''.join(nome.split())
+print('Total de letras do seu nome: {}'.format(len(lista2)))
+lista = nome.split()
+print('Número de letras do 1º nome: {}'.format(len(lista[0])))

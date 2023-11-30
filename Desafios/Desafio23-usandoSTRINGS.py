@@ -1,0 +1,8 @@
+print('==== DESAFIO 23 ====')
+num = str(input('Digite um número: '))
+print('Número digitado | {} | tem...'.format(num))
+lista = ' '.join(num).split()
+print('\nUNIDADE: {}'.format(lista.pop()))
+print('DEZENA: {}'.format(lista.pop()))
+print('CENTENA: {}'.format(lista.pop()))
+print('MILHAR: {}'.format(lista.pop()))

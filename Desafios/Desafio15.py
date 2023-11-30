@@ -1,0 +1,5 @@
+print('\033[1m==== DESAFIO 15 ====')
+print('|ALUGUEL DE CARROS|')
+dia = int(input('Por quantos dias você alugou o carro? '))
+km = float(input('Quantos Km rodados? '))
+print('O valor total dos custos foi de \033[1:33mR${}'.format((dia * 60) + (km * 0.15)))

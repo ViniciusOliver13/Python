@@ -1,0 +1,5 @@
+print('==== DESAFIO 03 ====')
+print('SOMA DE 2 NÚMEROS')
+num1 = int(input('DIGITE O 1º NÚMERO: '))
+num2 = int(input('DIGITE O 2º NÚMERO: '))
+print('A soma entre {} e {} é igual a {}'.format(num1, num2, num2 + num1))

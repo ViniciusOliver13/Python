@@ -1,0 +1,5 @@
+print('==== DESAFIO 06 ====')
+n1 = int(input('Digite um número e veja o seu dobro, triplo e raiz quadrada: '))
+print('Dobro >>> {}'.format(n1 * 2))
+print('Triplo >>> {}'.format(n1 * 3))
+print('Raiz Quadrada >>> {:.1f}'.format(n1 ** (1 / 2)))

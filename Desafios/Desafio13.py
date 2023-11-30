@@ -1,0 +1,5 @@
+print('==== DESAFIO 13 ====')
+print('   |NOVO SALÁRIO|')
+sal = float(input('Qual é o seu valor do salário? R$'))
+sal_n = float(sal + sal * (15 / 100))
+print('O novo salário desse funcionário é:\n>>> R${} + 15% = R${}'.format(sal, sal_n))
