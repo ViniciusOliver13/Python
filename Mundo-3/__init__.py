@@ -1,32 +1,35 @@
-def leiaDinheiro(msg):
-    while True:
-        valor = str(input(f'{msg}:')).replace(",", ".").strip()
-
-        if len(valor) > 2 and '.' in valor or valor.isnumeric():
-            break
-
-        if valor == "" or valor.isalpha():
-            print(f'\033[:31mERRO: "{valor}" é um preço inválido!\033[m')
-        else:
-            print(f'\033[:31mERRO: "{valor}" é um preço inválido!\033[m')
-
-    return float(valor)
+def aumentar(n=0, p=0, f=False):
+    valor = n + (n * p / 100)
+    return valor if f is False else moeda(valor)
 
 
-def leiaInt(mens):
-    while True:
-        try:
-            num = int(input(mens))
-        except (ValueError, TypeError, NameError):
-            print('\033[0:31mERRO! por favor, digite um número inteiro válido.\033[m')
-        except KeyboardInterrupt:
-            print('\033[0:31mUsuário preferiu não digitar esse número.\033[m')
-            return 0
-        else:
-            return num
+def diminuir(n=0, p=0, f=False):
+    valor = n - (n * p / 100)
+    return valor if f is False else moeda(valor)
 
 
-def Menu(msg, tam):
-    print('-' * tam)
-    print(f'{msg}\033[m')
-    print('-\033[m' * tam)
+def dobro(n=0, f=False):
+    valor = n * 2
+    return valor if f is False else moeda(valor)
+
+
+def metade(n=0, f=False):
+    valor = n / 2
+    return valor if f is False else moeda(valor)
+
+
+def moeda(form=0.0, m='R$'):
+    return f'{m}{form:<.2f}'.replace('.', ',')
+
+
+def resumo(p=0, au=0, re=0):
+    print('\033[1m-' * 30)
+    print(f'{"RESUMO DE VALOR":^30}')
+    print('-' * 30)
+    print(f'Preço analizado:{moeda(p):>12}')
+    print(f'Dobro do preço:{dobro(p, True):>13}')
+    print(f'Metade do preço:{metade(p, True):>12}')
+    print(f'{au}% de aumento:{aumentar(p, au, True):>13}')
+    print(f'{re}% de redução:{diminuir(p, re, True):>13}')
+
+    return '-' * 30
